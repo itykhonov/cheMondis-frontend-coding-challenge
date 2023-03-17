@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: chemondis-app
+    image: chemondis-app
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/chemondis-app/src
+    ports:
+      - 3000:3000
